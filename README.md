@@ -21,6 +21,16 @@ I saw this "1-Wire Keypad Interface With Arduino" from [2](https://www.electroni
 
 Since I intended to use a single output, I had to test whether there would be different voltages corresponding to pressing each individual key. I performed a simulation in LTspice with the circuit as follows:
 <p align = "center"><img src = "Images/ltspice_circuit.png"></p>
+<p><b>Figure 4.</b> LTspice schematic of Fig.3 for circuit simulation.</p>
+
+As can be seen from Fig. 4, the switches are voltage controlled. In order to check the output due to pressing each individual key, I created a set of pulsed switch voltage sources (SVS) as follows:
+<p align = "center"><img src = "Images/pulses.png"></p>
+<p><b>Figure 5.</b> Pulse voltages for each switch/key.</p>
+
+Each switch turns **ON** when its corresponding switch voltage is more than the threshold. Before proceeding, it should be noted that I performed transient simulation, which shows the evolution of the output over time. In order to view the characteristic output of each pressed key, I had to turn an SVS within some specific time, then turn it **OFF** for the rest of the simulation to turn **ON** the others, allowing to study their corresponding voltage outputs. Hence, voltages sources in Fig. 4 are pulsed.
+
+For each SVS, it pulses at 5 V during a 0.5-s interval, indicating that is **ON**. At the start of the simulation, S11 from Fig. 1 turns ON for 0.5 s, and turns off until the end. After 0.5 s when S11 switches off, S12 turns on also for another 0.5 s. The other switches follows the same timing, starting from left to right, top to bottom. The result of the simulation is given as follows:
+<p align = "center"><img src = "Images/"></p>
 
 
 # References
