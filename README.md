@@ -34,6 +34,103 @@ For each SVS, it pulses at 5 V during a 0.5-s interval, indicating that is **ON*
 <p align = "center"><b>Figure 6.</b> Pulse timing of each switch/SVS (<i>bottom</i>) and the resulting measured output <i>Vout</i> (<i>top</i>). The output characteristics is divided into four regions according to their row locations. <i>Vout</i> of each pressed key corresponds to the height of the bar.</p>
 
 From the data of Fig. 6, the _Vout_ of the following switches are as follows:
+<table align = "center">
+  <thead>
+  <tr>
+    <th class = "empty"></th>
+    <th align = "center">Switch</th>
+    <th align = "center"><i>Vout [mV]</i></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <th rowspan = "4">Row 1</th>
+    <td align = "center">S11</td>
+    <td align = "center">4775.5</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S12</td>
+    <td align = "center">2442.6</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S13</td>
+    <td align = "center">1640.9</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S14</td>
+    <td align = "center">1235.5</td>
+  </tr>
+
+  <tr>
+    <th rowspan = "4">Row 2</th>
+    <td align = "center">S21</td>
+    <td align = "center">4571.1</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S22</td>
+    <td align = "center">2388.0</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S23</td>
+    <td align = "center">1616.1</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S24</td>
+    <td align = "center">1221.4</td>
+  </tr>
+
+  <tr>
+    <th rowspan = "4">Row 3</th>
+    <td align = "center">S31</td>
+    <td align = "center">4385.5</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S32</td>
+    <td align = "center">2335.8</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S33</td>
+    <td align = "center">1592.0</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S34</td>
+    <td align = "center">1207.5</td>
+  </tr>
+
+  <tr>
+    <th rowspan = "4">Row 4</th>
+    <td align = "center">S41</td>
+    <td align = "center">4210.7</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S42</td>
+    <td align = "center">2285.8</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S43</td>
+    <td align = "center">1568.7</td>
+  </tr>
+
+  <tr>
+    <td align = "center">S44</td>
+    <td align = "center">1194.0</td>
+  </tr>
+  
+  </tbody>
+</table>
+
 
 
 # References
