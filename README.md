@@ -41,8 +41,8 @@ From the data of Fig. 6, the _Vout_ of the following switches are as follows:
   <thead>
   <tr>
     <th class = "empty"></th>
-    <th align = "center">Switch</th>
-    <th align = "center"><i>Vout [mV]</i></th>
+    <th align = "center">Switch/Key</th>
+    <th align = "center"><i>Vout</i> [mV]</th>
   </tr>
   </thead>
 
@@ -133,9 +133,14 @@ From the data of Fig. 6, the _Vout_ of the following switches are as follows:
   
   </tbody>
 </table>
+<p align = "center"><b>Table 1.</b> Corresponding <i>Vout</i> for each switch/key measured from the LTspice simulation.</p>
 
 ## Implementation
+Now that I have identified the output of each key, I can now tell Arduino which key is pressed based on the analog signal it measures. Arduino UNO board, on the other hand, uses the 8-bit ATMEGA328P microcontroller. However, during my initial trial, I assumed 10-bit instead of 8-bit. In any case, this means that the digitization process goes in discrete steps calculated as follows
 
+$$\displaystyle \Delta_{\text{step}} = \frac{V_{\text{max}} - V_{\text{min}}}{2^{n} - 1}$$
+
+where $n$ is the number of bits and ($V_{\text{max}}$, $V_{\text{min}}$) is the voltage range of interest. I assumed that in the real case where I measure the actual output node, I might not get the exact $4775.5$ mV for S11. It might fluctuate, so I tried to create a range based on the step calculated using 10 bits. However, upon realizing that it's 8 bit, there are ranges that overlap. I just assume that the fluctuations may be insiginificant, and I can set arbitrary ranges around the measured _Vout_ in Table 1.
 
 
 # References
