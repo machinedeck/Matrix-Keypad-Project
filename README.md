@@ -9,7 +9,7 @@ The solution I came up with was to involve some circuit simulation. Once I would
 <p align = "center"><b>Figure 1.</b> Illustration of the matrix keypad with the connections I adopted from [<a href = "https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/">1</a>].</p>
 
 ## Introduction
-I have a 4x4 keypad which I do not know the specifications or type. My Arduino kit only shows "Key Board 1PCS". Since I wanted to test it but I did not have the necessary electronic parts for connections, I decided to perform simulations first. I also though that performing simulations and test bench could save me time for developing the codes later as I would just have to connect everything and see if it works.
+I have a 4x4 keypad with 8 pins as illustrated in Fig. 1, which I do not know the specifications or type. My Arduino kit only shows "Key Board 1PCS". Since I wanted to test it but I did not have the necessary electronic parts for connections, I decided to perform simulations first. I also though that performing simulations and test bench could save me time for developing the codes later as I would just have to connect everything and see if it works.
 
 My assumption is that the keypad is a matrix of switches, and the connections I have followed is given below:
 <p align = "center"><img src = Images/switches.png></p>
