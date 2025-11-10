@@ -31,6 +31,9 @@ Each switch turns **ON** when its corresponding switch voltage is more than the 
 
 For each SVS, it pulses at 5 V during a 0.5-s interval, indicating that is **ON**. At the start of the simulation, S11 from Fig. 1 turns ON for 0.5 s, and turns off until the end. After 0.5 s when S11 switches off, S12 turns on also for another 0.5 s. The other switches follows the same timing, starting from left to right, top to bottom. The result of the simulation is given as follows:
 <p align = "center"><img src = "Images/sim.svg"></p>
+<p align = "center"><b>Figure 6.</b> Pulse timing of each switch/SVS (<i>bottom</i>) and the resulting measured output <i>Vout</i> (<i>top</i>). The output characteristics is divided into four regions according to their row locations. <i>Vout</i> of each pressed key corresponds to the height of the bar.</p>
+
+From the data of Fig. 6, the _Vout_ of the following switches are as follows:
 
 
 # References
