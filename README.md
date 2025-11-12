@@ -1,5 +1,6 @@
 # Matrix Keypad Project
 _Last Update: November 11, 2025_
+<p align = "center"><img src = "Images/ui_sample.png"></p>
 
 ## Background
 This is a simple project I started when I saw a matrix keypad in my Arduino Kit. The initial idea I have is to build an "instrument" where pressing the keys creates sound, and both the RGB LED module and matrix tube would show visualizations. It was a fancy idea, but far from completion if I could not even set up the keypad. I did not also know where the breadboard was; however, I was really curious as to how it would be done.
