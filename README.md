@@ -1,5 +1,5 @@
-# Matrix Keypad Project
-_Last Update: November 11, 2025_
+# Python Keypad Simulator in Arduino UNO Microcontroller through Serial Communication
+_Last Update: November 14, 2025_
 <p align = "center"><img src = "Images/ui_sample.png"></p>
 
 ## Background
