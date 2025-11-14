@@ -1,7 +1,7 @@
 # Python Keypad Simulator in Arduino UNO Microcontroller through Serial Communication
 _Last Update: November 14, 2025_
 
-**Abstract**
+**Abstract:** 4x4 Keypad consists of matrix of switches with each row/column connected to a horizontal/vertical line, providing eight output pins. For a single-output detection system, proper circuit design is essential to differentiate one key to another. This project performed a single-output keypad simulation in LTspice to characterize the distinguishing analog voltage signal of each key. The resulting data was used to develop a mock keypad user-interface (UI) system which randomizes a signal within the range of the key's characteristic voltage, taking into account possible signal fluctuations, and sends it to Arduino UNO microcontroller for processing. The detected and processed signals were sent back to the UI as a string of mathematical expressions, which were then calculated by an different underlying processing algorithm. The developed UI platform could potentially be re-used to replace the mock keypad UI with a real keypad to achieve lower latency and avoid serial communication traffic.
 <p align = "center"><img src = "Images/ui_sample.png"></p>
 
 ## Background
