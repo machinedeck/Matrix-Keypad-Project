@@ -5,14 +5,14 @@ _**Author:** černýstroj, **Last Update:** November 14, 2025_
 <p align = "center"><img src = "Images/ui_sample.png"></p>
 <p ailgn = "center"><b>Figure 0.</b> Tkinter UI developed in Python which generates a signal when a key is pressed (<i>keypad on the right</i>). This signal's value is shown on the "Sending Info" tab, with a status display to inform that the signal has been serially communicated to the Arduino UNO microcontroller. Upon detection, the signal is processed to determine which character it corresponds to. The resulting information is communicated back to the UI to display the character on the screen.</p>
 
-## Background
+## 0. Background
 This is a simple project I started when I saw a matrix keypad in my Arduino Kit. The initial idea I have is to build an "instrument" where pressing the keys creates sound, and both the RGB LED module and matrix tube would show visualizations. It was a fancy idea, but far from completion if I could not even set up the keypad. I did not also know where the breadboard was; however, I was really curious as to how it would be done.
 
 The solution I came up with was to involve some circuit simulation. Once I would have the simulation, I could use this information to create signals that I could feed to Arduino, as if I were doing a test bench for VHDL.
 <p align = "center"><img src = "Images/matrix_keypad.png"></p>
 <p align = "center"><b>Figure 1.</b> Illustration of the matrix keypad with the connections I adopted from [<a href = "https://www.circuitbasics.com/how-to-set-up-a-keypad-on-an-arduino/">1</a>].</p>
 
-## Introduction
+## 1. Introduction
 I have a 4x4 keypad with 8 pins as illustrated in Fig. 1, which I do not know the specifications or type. My Arduino kit only shows "Key Board 1PCS". Since I wanted to test it but I did not have the necessary electronic parts for connections, I decided to perform simulations first. I also though that performing simulations and test bench could save me time for developing the codes later as I would just have to connect everything and see if it works.
 
 My assumption is that the keypad is a matrix of switches, and the connections I have followed is given below:
@@ -25,7 +25,7 @@ I saw this "1-Wire Keypad Interface With Arduino" from [2](https://www.electroni
 
 Since I intended to use a single output, I had to test whether there would be different voltages corresponding to pressing each individual key. 
 
-## Simulation
+## 2. Simulation
 I performed a simulation in LTspice with the circuit as follows:
 <p align = "center"><img src = "Images/ltspice_circuit.png"></p>
 <p><b>Figure 4.</b> LTspice schematic of Fig.3 for circuit simulation.</p>
@@ -114,7 +114,7 @@ From the data of Fig. 6, the _Vout_ of the following switches are as follows:
 </table>
 <p align = "center"><b>Table 1.</b> Corresponding <i>Vout</i> for each switch/key measured from the LTspice simulation.</p>
 
-## Implementation
+## 3. Implementation
 Now that I have identified the output of each key, I can now tell Arduino which key is pressed based on the analog signal it measures. Arduino UNO board, on the other hand, uses the 8-bit ATMEGA328P microcontroller. However, during my initial trial, I assumed 10-bit instead of 8-bit. In any case, this means that the digitization process goes in discrete steps calculated as follows
 
 $$\displaystyle \Delta_{\text{step}} = \frac{V_{\text{max}} - V_{\text{min}}}{2^{n} - 1}$$
@@ -123,9 +123,13 @@ where $n$ is the number of bits and ($V_{\text{max}}$, $V_{\text{min}}$) is the 
 
 Based on these ranges, I started the serial communication protocol in Python. I specified that when a key (e.g. S11) is pressed, a random number is generated within its corresponding range. This signal is then sent to the microcontroller. For the microcontroller part, I also specified the corresponding character of each key. For example, if the microcontroller receives a signal within the range of S11, it should output "1". For characters such as "+", etc. I did not really write them as is. I wrote then in terms of the number of keys, and when the information is sent back to Python, they will be decoded to matching characters.
 
-### MDAS calculation
+### 3.1. MDAS calculation
 The generation and transmission of the signal between the UI and microcontroller is straightforward. However, the processing of the string of characters had become a rigorous and crucial task for a successful MDAS calculator.
 <p align = "center"><img src = "Images/mdas_outline_with_sample_code.png"></p>
+
+
+## 4. Future Work
+I tried to implement the simulated circuit in a PCB to practice with KiCAD software. My continuing work can be found in this [link](https://github.com/machinedeck/Matrix-Keypad-Project/blob/main/README.md).
 
 
 # References
