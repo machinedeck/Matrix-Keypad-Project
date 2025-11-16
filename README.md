@@ -125,6 +125,7 @@ Based on these ranges, I started the serial communication protocol in Python. I 
 
 ### MDAS calculation
 The generation and transmission of the signal between the UI and microcontroller is straightforward. However, the processing of the string of characters had become a rigorous and crucial task for a successful MDAS calculator.
+<p align = "center"><img src = "Images/mdas_outline.png"></p>
 
 
 # References
